@@ -15,7 +15,29 @@ describe('helloWorld', function() {
 });
 
 describe('sayHello', function() {
-    it('should be a defined function', function () {
+    it('should be a defined function', function() {
         expect(typeof sayHello).toBe('function');
-    })
+    });
+    it('should be a defined function', function() {
+        expect(typeof sayHello()).toBe('string');
+    });
+    it('say hello jane', function() {
+        expect(sayHello()).toBe('Hello, Jane!');
+    });
+    it('say hello alex', function() {
+        expect(sayHello('Alex!')).toBe('Hello, Alex!');
+    });
+    it('say hello pat', function() {
+        expect(sayHello('Pat!')).toBe('Hello, Pat!');
+    });
+    it('say hello world', function() {
+        expect(sayHello("world")).toBe("Hello, World!");
+    });
+    it('say hello world', function() {
+        expect(sayHello(true)).toBe("Hello, World!")
+    });
+    it('say hello world', function() {
+        expect(sayHello(false)).toBe("Hello, World!")
+    });
+
 });
